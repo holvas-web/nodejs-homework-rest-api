@@ -46,7 +46,7 @@ async function register(req, res, next) {
       Body: [
         ElasticEmail.BodyPart.constructFromObject({
           ContentType: "HTML",
-          Content: `To confirm your registration, follow the <a href="http://localhost:3000/users/verify/${verificationToken}">link</a>`,
+          Content: `To confirm your registration, follow the <a href="${BASE_URL}/users/verify/${verificationToken}">link</a>`,
         }),
       ],
       Subject: "Welcome to your contact book",
@@ -193,7 +193,7 @@ async function resendVerify(req, res, next) {
       Body: [
         ElasticEmail.BodyPart.constructFromObject({
           ContentType: "HTML",
-          Content: `To confirm your registration, follow the <a href="http://localhost:3000/users/verify/${user.verificationToken}">link</a>`,
+          Content: `To confirm your registration, follow the <a href="${BASE_URL}/users/verify/${user.verificationToken}">link</a>`,
         }),
       ],
       Subject: "Welcome to your contact book",
