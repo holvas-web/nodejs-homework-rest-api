@@ -14,6 +14,7 @@ const { authSchema, subscriptionSchema, verifySchema } = require("../routes/sche
 
 const SECRET_KEY = process.env.SECRET_KEY;
 const FROM_EMAIL = process.env.USER_EMAIL;
+const BASE_URL = process.env.BASE_URL;
 
 const defaultClient = ElasticEmail.ApiClient.instance;
 const { apikey } = defaultClient.authentications;
